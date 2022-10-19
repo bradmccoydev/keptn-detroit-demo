@@ -1,0 +1,16 @@
+apiVersion: keptn.sh/v1
+kind: GitPromotionConfig
+metadata:
+  name: ortelius-podtato-head-test
+spec:
+  strategy: flat-pr
+  nextStage: qa
+  lastStage: load
+  autoApprove: false
+  target:
+    repo: https://github.com/ortelius/ortelius-kubernetes
+    secret: github
+    provider: github
+  paths:
+    - source: kube-infra/kustomize/podtato-head/podtato-head/envs/int/version.yaml
+      target: kube-infra/kustomize/podtato-head/podtato-head/envs/qa/version.yaml
