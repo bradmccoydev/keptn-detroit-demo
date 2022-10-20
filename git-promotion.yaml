@@ -5,7 +5,7 @@ metadata:
 spec:
   strategy: flat-pr
   nextStage: int
-  lastStage:
+  lastStage: int
   autoApprove: true
   target:
     repo: https://github.com/ortelius/ortelius-kubernetes
