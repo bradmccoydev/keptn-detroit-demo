@@ -6,7 +6,7 @@ spec:
   strategy: flat-pr
   nextStage: qa
   lastStage: load
-  autoApprove: false
+  autoApprove: true
   target:
     repo: https://github.com/ortelius/ortelius-kubernetes
     secret: github
