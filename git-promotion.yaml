@@ -4,7 +4,7 @@ metadata:
   name: ortelius-podtato-head-test
 spec:
   strategy: flat-pr
-  nextStage:
+  nextStage: prod
   lastStage: stag
   autoApprove: false
   target:
