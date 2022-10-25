@@ -25,6 +25,11 @@ spec:
     - name: "int"
       sequences:
       - name: "test"
+        triggeredOn:
+          - event: "load.test.finished"
+            selector:
+              match:
+              result: "pass"
         tasks:
         - name: "api-test"
         - name: "trace-test"
@@ -36,6 +41,11 @@ spec:
     - name: "qa"
       sequences:
       - name: "test"
+        triggeredOn:
+          - event: "int.test.finished"
+            selector:
+              match:
+              result: "pass"
         tasks:
         - name: "api-test"
         - name: "trace-test"
@@ -47,6 +57,11 @@ spec:
     - name: "stag"
       sequences:
       - name: "test"
+        triggeredOn:
+          - event: "qa.test.finished"
+            selector:
+              match:
+              result: "pass"
         tasks:
         - name: "api-test"
         - name: "evaluation"
@@ -56,6 +71,11 @@ spec:
     - name: "prod"
       sequences:
       - name: "test"
+        triggeredOn:
+          - event: "stag.test.finished"
+            selector:
+              match:
+              result: "pass"
         tasks:
         - name: "test"
         - name: "evaluation"
