@@ -77,10 +77,6 @@ spec:
               match:
               result: "pass"
         tasks:
-        - name: "test"
-        - name: "evaluation"
-          properties:
-            timeframe: 5m
         - name: "catalog"
       - name: "remediation"
         triggeredOn:
