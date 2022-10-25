@@ -65,9 +65,9 @@ spec:
         tasks:
         - name: "api-test"
         - name: "evaluation"
-        - name: "git-promotion"
           properties:
             timeframe: 5m
+        - name: "git-promotion"  
         - name: "catalog"
     - name: "prod"
       sequences:
