@@ -13,4 +13,4 @@ spec:
     provider: github
   paths:
     - source: kube-infra/kustomize/podtato-head/podtato-head/envs/qa/settings.yaml
-      target: kube-infra/kustomize/podtato-head/podtato-head/envs/staging/settings.yaml
+      target: kube-infra/kustomize/podtato-head/podtato-head/envs/stag/settings.yaml
