@@ -12,5 +12,5 @@ spec:
     secret: github
     provider: github
   paths:
-    - source: kube-infra/kustomize/podtato-head/podtato-head/envs/load/version.yaml
-      target: kube-infra/kustomize/podtato-head/podtato-head/envs/int/version.yaml
+    - source: kube-infra/kustomize/podtato-head/podtato-head/envs/load/settings.yaml
+      target: kube-infra/kustomize/podtato-head/podtato-head/envs/int/settings.yaml
